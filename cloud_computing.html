@@ -88,6 +88,8 @@ form button {
 .list-icon.success {
     color: maroon;
 }
+#quoteForm { display: none; }
+#quoteForm { display: block; }
 
 </style>
 </head>
@@ -516,7 +518,7 @@ form button {
 
           <div class="col-lg-8">
             <div class="service-hero">
-              <img src="assets/img/services/services-7.webp" alt="" class="img-fluid">
+              <img src="assets/img/quizcloudcomputing_converted.webp" alt="" class="img-fluid">
               <!-- <div class="service-badge">
                 <span>Premium Service</span>
               </div> -->
@@ -795,24 +797,16 @@ form button {
                       <span>info@avanteia.com</span>
                     </div>
                   </div>
-                 <a href="#" id="getQuoteBtn" class="btn btn-primary">Submit</a>
+                 <!-- <a href="#" id="getQuoteBtn" class="btn btn-primary">Submit</a> -->
 
-<!-- Hidden Form -->
-<form id="quoteForm" action="https://formsubmit.co/info@avanteia.com" method="POST" >
+<!-- Form always visible -->
+<form id="quoteForm" action="https://formsubmit.co/info@avanteia.com" method="POST">
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
   <input type="text" name="subject" placeholder="Subject" required>
   <textarea name="comment" placeholder="Your Comment" rows="4" required></textarea>
-  <button type="submit" id="getQuoteBtn" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-<script>
-document.getElementById('getQuoteBtn').addEventListener('click', function(e) {
-  e.preventDefault();
-  const form = document.getElementById('quoteForm');
-  form.style.display = form.style.display === 'block' ? 'none' : 'block';
-});
-</script>
                   
                 </div>
 
